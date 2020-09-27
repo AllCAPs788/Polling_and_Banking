@@ -14,31 +14,32 @@ import os
 import csv
 #refer to wrestler functions and how to read/write exercises
 # Path to collect data from the Resources folder
-election_data = os.path.join('..', 'Python-Challenge', 'election_data.csv')
+election_data = os.path.join('..', 'python-challenge1', 'election_data.csv')
 # # Method 1: Plain Reading of CSV files
 with open(election_data, 'r') as file_handler:
     lines = file_handler.read()
     print(lines)
     print(type(lines))
 
+    #for vote in votes
 
      # A complete list of candidates who received votes
   #candidate = str
   # The percentage of votes each candidate won: vote_number/vote_cast
+  # print('{}: {}% ({})'.format(key,round((key_votes/total_number_votes * 100),3),key_votes))
 #* The total number of votes each candidate won: vote_cast
 # The winner of the election based on popular vote.
-# The total number of votes cast: vote_total
+# The total number of votes cast: vote_total = sum
 
 # Define the function and have it accept the 'wrestler_data' as its sole parameter
-def print_percentages(election_data):
+#def print_percentages(election_data):
     # For readability, it can help to assign your values to variables with descriptive names
-    Candidate = str(election_data[2])
-    County = str(election_data[1])
-    votes = int(election_data[0])
+    #Candidates() = str("Corey","Khan","Li")
+    #County() = str(election_data[1])
+    #votes = int(election_data[0])
     
-vote_cast = sum(1 for votes in election_data.csv)  # fileObject is your csv.reader
+    #vote_cast = sum(1 for votes in election_data.csv)  # fileObject is your csv.reader
 
 
-print(vote_cast)
+#print(vote_cast)
 
-# print('{}: {}% ({})'.format(key,round((key_votes/total_number_votes * 100),3),key_votes))
