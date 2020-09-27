@@ -8,16 +8,19 @@ import csv
 # Path to collect data from the Resources folder
 election_data = os.path.join('Resources','election_data.csv')
 # # Method 1: Plain Reading of CSV files
-with open(election_data, 'r') as file_handler:
-    lines = file_handler.read()
-    print(lines)
-    print(type(lines))
-
+#with open(election_data, 'r') as file_handler:
+    #lines = file_handler.read()
+    #print(lines)
+    #print(type(lines))
+candidate = str(election_data[0])
+for row in election_data:
+        print(candidate)
     #for vote in votes
 
      # A complete list of candidates who received votes
-  #candidate = str
-  # The percentage of votes each candidate won: vote_number/vote_cast
+
+
+  # The percentage of votes each candidate won: Candidate_Percent = vote_number/vote_cast
   # print('{}: {}% ({})'.format(key,round((key_votes/total_number_votes * 100),3),key_votes))
 #* The total number of votes each candidate won: vote_cast
 # The winner of the election based on popular vote.
@@ -25,10 +28,12 @@ with open(election_data, 'r') as file_handler:
 
 # #list of F-statements that will be exported to analysis file
 #for printing to Poll_Analysis.txt
+# The total number of votes cast (F-statement)
+# A complete list of candidates who received votes (F-statement)
+# The percentage of votes each candidate won (F-statement)
 # 
-# 
-# 
-# 
+
+
 # fine the function and have it accept the 'wrestler_data' as its sole parameter
 #def print_percentages(election_data):
     # For readability, it can help to assign your values to variables with descriptive names
@@ -43,6 +48,6 @@ with open(election_data, 'r') as file_handler:
 
 #text_file = open("Output.txt", "w")
 
-#text_file.write("Purchase Amount: " 'TotalAmount')
+#text_file.write("Candidate_Percent:", "vote_total" " 'TotalAmount')
 
 #text_file.close()
