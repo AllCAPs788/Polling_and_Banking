@@ -15,18 +15,29 @@ with open(budget_data) as csvfile:
 #header = nextcsv, skip headers to get to data 
 def bank_stats(budget_data):
     Date = str(budget_data[0])
-    Profits_Losses = float(budget_data[1])
-    Total = 86
-    print(Date)
-
+    Profits_Losses = int(budget_data[1])
+    Case_count = 86
     
+    Months = sum(Date)
+    #PL_average = Profits_Losses/Case_count
+   
+    #Increase =Profits_Losses.max (whatever function returns max amount)
+    #Decrease =Profits_Losses.min
+   
+   
+    #text_file = open("Budget_Analysis.txt", "w")
+
+    #text_file.write('Months:' 'PL_average:' 'Increase:' 'Decrease:'))
+
+    #text_file.close() 
+
 bank_stats  
     
     #print(Date)
     
 
-    #PL_average = Profits_Losses/Total
-    #month_counter = 0
+    
+    
     #months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
     #return float(statistics.mean(Profits_Losses))
     #for row in csvreader:
@@ -41,9 +52,9 @@ bank_stats
 # The average of the changes in "Profit/Losses" over the entire period
     # PL/Total, Total = 86
 #The greatest increase in profits (date and amount) over the entire period
-    #=profits/losses.max (whatever function returns max amoutn)
+   
 #The greatest decrease in losses (date and amount) over the entire period
-    #MIN for profits/losses
+    
 
 #row_count = sum(1 for row in budget_data.csv)  # fileObject is your csv.reader
 
@@ -60,8 +71,3 @@ bank_stats
   #for printing to Budget_Analysis.txt
 
 #list of F-statements that will be exported to analysis file  
-#text_file = open("Output.txt", "w")
-
-#text_file.write("Purchase Amount: " 'TotalAmount')
-
-#text_file.close()
