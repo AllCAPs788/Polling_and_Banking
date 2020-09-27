@@ -8,12 +8,14 @@ import csv
 # Path to collect data from the Resources folder
 election_data = os.path.join('Resources','election_data.csv')
 # # Method 1: Plain Reading of CSV files
-#with open(election_data, 'r') as file_handler:
+with open(election_data, 'r') as csvfile:
+    csvreader = csv.reader(csvfile, delimiter=",")
+    header = next(csvreader)
     #lines = file_handler.read()
     #print(lines)
     #print(type(lines))
-candidate = str(election_data[0])
-for row in election_data:
+    candidate = str(election_data[2])
+    for row in csvreader:
         print(candidate)
     #for vote in votes
 

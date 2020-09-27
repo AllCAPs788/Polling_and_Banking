@@ -6,24 +6,24 @@ import csv
 # Path to collect data from the Resources folder
 budget_data = os.path.join('Resources','budget_data.csv')
 # # Method 1: Plain Reading of CSV files
-with open(budget_data, 'r') as file_handler:
-    lines = file_handler.read()
-    csvreader = csv.reader(budget_data, delimiter=',')
+ # Split the data on commas
+with open(budget_data) as csvfile:    
+    csvreader = csv.reader(csvfile, delimiter=',')
+
     header = next(csvreader)
-    print(lines)
-    print(type(lines))
-
-Date = str(lines[0])
-print(Date)
+    print(csvreader)
 #header = nextcsv, skip headers to get to data 
+def bank_stats(budget_data):
+    Date = str(budget_data[0])
+    Profits_Losses = float(budget_data[1])
+    Total = 86
+    print(Date)
 
-#def print_percentages(budget_data):
-    # For readability, it can help to assign your values to variables with descriptive names
     
-   
-    #Profits_Losses = int(lines[1])
+bank_stats  
+    
     #print(Date)
-    #Total = 86
+    
 
     #PL_average = Profits_Losses/Total
     #month_counter = 0
