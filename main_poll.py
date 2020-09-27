@@ -43,3 +43,9 @@ with open(election_data, 'r') as file_handler:
 
 #print(vote_cast)
 
+#for printing to Budget_Analysis.txt
+text_file = open("Output.txt", "w")
+
+text_file.write("Purchase Amount: " 'TotalAmount')
+
+text_file.close()
