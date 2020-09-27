@@ -14,15 +14,6 @@ with open(budget_data, 'r') as file_handler:
     print(type(lines))
 
 
-
-
-
-
-
-
-
-
-
 #header = nextcsv, skip headers to get to data 
 
 # Define the function and have it accept the 'wrestler_data' as its sole parameter
@@ -46,7 +37,7 @@ print(print_percentages)
     #loop syntax: for date in date, for x in Profit, for x in Losses
     #
 #The total number of months included in the dataset
-    #define months, months = 
+    #define months, months = sum(Date)
 #The net total amount of "Profit/Losses" over the entire period
     #sum of Profit, sum of Profit/Losses   
 # The average of the changes in "Profit/Losses" over the entire period
@@ -60,11 +51,6 @@ print(print_percentages)
 
 #Print(Date)
 
-# If the loss percentage is over 50, type_of_wrestler is "Jobber". Otherwise it is "Superstar".
-    #if loss_percent > 50:
-     #   type_of_wrestler = "Jobber"
-    #else:
-     #   type_of_wrestler = "Superstar"
 
  # Loop through the data
     
@@ -73,4 +59,11 @@ print(print_percentages)
         #if name_to_check == row[0]:
             #print_percentages(row)
 
-  
+  #for printing to Budget_Analysis.txt
+
+#list of F-statements that will be exported to analysis file  
+text_file = open("Output.txt", "w")
+
+text_file.write("Purchase Amount: " 'TotalAmount')
+
+text_file.close()
