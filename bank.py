@@ -4,7 +4,7 @@ import os
 import csv
 #refer to wrestler functions and how to read/write exercises
 # Path to collect data from the Resources folder
-budget_data = os.path.join('', 'python-challenge1' , 'budget_data.csv')
+budget_data = os.path.join('Resources','budget_data.csv')
 # # Method 1: Plain Reading of CSV files
 with open(budget_data, 'r') as file_handler:
     lines = file_handler.read()
