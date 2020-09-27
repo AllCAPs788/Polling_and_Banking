@@ -4,7 +4,7 @@ import os
 import csv
 #refer to wrestler functions and how to read/write exercises
 # Path to collect data from the Resources folder
-budget_data = os.path.join('..', 'python-challenge1', 'budget_data.csv')
+budget_data = os.path.join('', 'python-challenge1' , 'budget_data.csv')
 # # Method 1: Plain Reading of CSV files
 with open(budget_data, 'r') as file_handler:
     lines = file_handler.read()
@@ -13,29 +13,27 @@ with open(budget_data, 'r') as file_handler:
     print(lines)
     print(type(lines))
 
-
+Date = str(lines[0])
+print(Date)
 #header = nextcsv, skip headers to get to data 
 
-# Define the function and have it accept the 'wrestler_data' as its sole parameter
-def print_percentages(budget_data):
+#def print_percentages(budget_data):
     # For readability, it can help to assign your values to variables with descriptive names
     
-    
-    Date = str(lines[0])
-    Profits_Losses = int(lines[1])
+   
+    #Profits_Losses = int(lines[1])
     #print(Date)
     #Total = 86
 
     #PL_average = Profits_Losses/Total
     #month_counter = 0
     #months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
-    return float(statistics.mean(Profits_Losses))
+    #return float(statistics.mean(Profits_Losses))
     #for row in csvreader:
-print(print_percentages)
+#print(print_percentages)
 #Your task is to create a Python script that analyzes the records to calculate each of the following:
 
-    #loop syntax: for date in date, for x in Profit, for x in Losses
-    #
+    
 #The total number of months included in the dataset
     #define months, months = sum(Date)
 #The net total amount of "Profit/Losses" over the entire period
@@ -62,8 +60,8 @@ print(print_percentages)
   #for printing to Budget_Analysis.txt
 
 #list of F-statements that will be exported to analysis file  
-text_file = open("Output.txt", "w")
+#text_file = open("Output.txt", "w")
 
-text_file.write("Purchase Amount: " 'TotalAmount')
+#text_file.write("Purchase Amount: " 'TotalAmount')
 
-text_file.close()
+#text_file.close()
