@@ -18,7 +18,7 @@ with open(election_data) as csvfile:
 
 
      # A complete list of candidates who received votes
-
+     #Candidates() = str("Corey","Khan","Li")    
 
   # The percentage of votes each candidate won: Candidate_Percent = vote_number/vote_cast
   # print('{}: {}% ({})'.format(key,round((key_votes/total_number_votes * 100),3),key_votes))
@@ -37,7 +37,7 @@ with open(election_data) as csvfile:
 # fine the function and have it accept the 'wrestler_data' as its sole parameter
 #def print_percentages(election_data):
     # For readability, it can help to assign your values to variables with descriptive names
-    #Candidates() = str("Corey","Khan","Li")
+    
     #County() = str(election_data[1])
     #votes = int(election_data[0])
     
