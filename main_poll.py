@@ -15,13 +15,15 @@ with open(election_data) as csvfile:
     for row in csvreader:
         print(row[0]) # prints the entire row
         #print(f'First column value: {row[0]}') # prints only first column value for each row 
-
-
-     # A complete list of candidates who received votes
-     #Candidates() = str("Corey","Khan","Li")    
-
+        vote = row[0]
+        vote_cast =   # fileObject is your csv.reader
+        vote_total = sum(vote)
+        County() = str(election_data[1]) # A complete list of candidates who received votes
+    
+    #Candidates() = str("Corey","Khan","Li")    
+    # print('{}: {}% ({})'.format(key,round((key_votes/total_number_votes * 100),3),key_votes))
   # The percentage of votes each candidate won: Candidate_Percent = vote_number/vote_cast
-  # print('{}: {}% ({})'.format(key,round((key_votes/total_number_votes * 100),3),key_votes))
+  
 #* The total number of votes each candidate won: vote_cast
 # The winner of the election based on popular vote.
 # The total number of votes cast: vote_total = sum
@@ -38,16 +40,16 @@ with open(election_data) as csvfile:
 #def print_percentages(election_data):
     # For readability, it can help to assign your values to variables with descriptive names
     
-    #County() = str(election_data[1])
+    
     #votes = int(election_data[0])
     
-    #vote_cast = sum(1 for votes in election_data.csv)  # fileObject is your csv.reader
+    
 
 
 #print(vote_cast)
 
 #text_file = open("Output.txt", "w")
 
-#text_file.write("Candidate_Percent:", "vote_total" " 'TotalAmount')
+#text_file.write(f"Winner: {winner}" "Candidate votes:{candidate votes" "vote percentage:{vote percentage}")
 
 #text_file.close()
