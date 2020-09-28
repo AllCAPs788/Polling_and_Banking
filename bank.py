@@ -1,4 +1,4 @@
-#Import statistics
+import statistics
 import os
 import csv
 #refer to wrestler functions and how to read/write exercises
@@ -14,24 +14,26 @@ with open(budget_data) as csvfile:
     header = next(csvreader)
     for row in csvreader:
         print(row[0]) # prints the entire row
-        #print(f'First column value: {row[0]}') # prints only first column value for each row 
+        print(f'First column value: {row[0]}') # prints only first column value for each row 
 
-#header = nextcsv, skip headers to get to data 
-        def bank_stats(budget_data):
-    #Date = row[0]
-            Profits_Losses = int(row[1])
-            Profits_Total = sum(Profits_Losses)
-            Case_count = 86
-            PL_average = float(statistics.mean(Profits_Losses))   
-    #Months = sum(Date)
-    #print(Months)
+def bank_stats(budget_data):
 
-            # = Profits_Losses/Case_count
-            print(PL_average)
-            Increase = max(Profits_Losses)
-            Decrease = min(Profits_Losses)
+        
+    Date = row[0] 
+    Months = sum(Date)
+    Profits_Losses = int(row[1])
+    Increase = max(Profits_Losses)
+    Decrease = min(Profits_Losses)
+    Profits_Total = sum(Profits_Losses)
+    PL_average = float(statistics.mean(Profits_Losses))   
+        
+    print(Months)
+    print(Profits_Total)
+    print(PL_average)
+    print(Increase)
+    print(Decrease)
 
-print(bank_stats)  
+print(bank_stats) 
     #text_file = open("Budget_Analysis.txt", "w")
 
     #text_file.write(f"There are {Months} months:" "The net total amount of 'Profit/Losses' is {PL_Total}:" The Profit/Loss average is {PL_average}:" "The largest increase is {Increase}:" "The largest decrease is {Decrease}))
