@@ -1,23 +1,21 @@
-#* You will be give a set of poll data called [election_data.csv](PyPoll/Resources/election_data.csv). The dataset is composed of three columns: `Voter ID`, `County`, and `Candidate`. Your task is to create a Python script that analyzes the votes and calculates each of the following:
-
-
-#* As an example, your analysis should look similar to the one below:
+#Import statistics
 import os
 import csv
 #refer to wrestler functions and how to read/write exercises
 # Path to collect data from the Resources folder
 election_data = os.path.join('Resources','election_data.csv')
-# # Method 1: Plain Reading of CSV files
-with open(election_data, 'r') as csvfile:
-    csvreader = csv.reader(csvfile, delimiter=",")
+
+ # Split the data on commas
+with open(election_data) as csvfile:    
+    csvreader = csv.reader(csvfile, delimiter=',')
+
+    
+    #print(header)
     header = next(csvreader)
-    #lines = file_handler.read()
-    #print(lines)
-    #print(type(lines))
-    candidate = str(election_data[2])
     for row in csvreader:
-        print(candidate)
-    #for vote in votes
+        print(row[0]) # prints the entire row
+        #print(f'First column value: {row[0]}') # prints only first column value for each row 
+
 
      # A complete list of candidates who received votes
 
