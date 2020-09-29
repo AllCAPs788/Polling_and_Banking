@@ -11,7 +11,8 @@ def Vote_Stats(election_data):
     vote = row[0]
     vote_cast = #The total number of votes each candidate won print
     vote_counter = vote_counter + 1
-    County() = str(election_data[1]) 
+    County = str(election_data[1])
+    County = list(dict.fromkeys(County)) 
     winner = ('{Candidate}: {their percentage}% ({repeat})'.format(key,round((key_votes/total_number_votes * 100),3),key_votes))
     print(Candidates[]) # A complete list of candidates who received votes
     print(vote)
