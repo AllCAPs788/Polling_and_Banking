@@ -30,10 +30,10 @@ with open(election_data) as csvfile:
 
         #text_file.write(f"Winner: {winner}" "Candidate votes:{candidate votes" "vote percentage:{vote percentage}")
             print(f"Stats for {name}")
-    print(f"WIN PERCENT: {str(win_percent)}")
-    print(f"LOSS PERCENT: {str(loss_percent)}")
-    print(f"DRAW PERCENT: {str(draw_percent)}")
-    print(f"{name} is a {type_of_wrestler}")
+            print(f"WIN PERCENT: {str(win_percent)}")
+            print(f"LOSS PERCENT: {str(loss_percent)}")
+            print(f"DRAW PERCENT: {str(draw_percent)}")
+            print(f"{name} is a {type_of_wrestler}")
         #text_file.close()
     # 
   # The percentage of votes each candidate won: Candidate_Percent = vote_number/vote_cast

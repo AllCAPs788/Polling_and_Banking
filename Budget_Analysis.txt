@@ -1,0 +1,5 @@
+There are 85 months:]
+The net total amount of 'Profit/Losses' is {Profits_Total} for the budget:
+The Profit/Loss average is {PL_average} for the budget:
+The largest increase is {Increase} for the budget:
+The largest decrease is {Decrease} for the budget:
