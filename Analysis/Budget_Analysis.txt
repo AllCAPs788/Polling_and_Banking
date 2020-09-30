@@ -1,5 +1,5 @@
-There are 85 months:]
-The net total amount of 'Profit/Losses' is {Profits_Total}:
-The Profit/Loss average is {PL_average}:
-The largest increase is {Increase}:]
-The largest decrease is {Decrease}
+There are 85 months:
+The net total amount of 'Profit/Losses' is 37514694 for the budget:
+The Profit/Loss average is 441349.34117647057 for the budget:
+The largest increase is 1170593 for the budget:
+The largest decrease is -1196225 for the budget:

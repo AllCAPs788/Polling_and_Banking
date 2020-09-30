@@ -21,10 +21,15 @@ def bank_stats(budget_data):
     print(Increase)
     print(Decrease)
     
-Budget_Analysis = os.path.join('Analysis','Budget_Analysis.txt')
-with open(Budget_Analysis, 'w') as results_file:
+    Budget_Analysis = os.path.join('Analysis','Budget_Analysis.txt')
+    with open(Budget_Analysis, 'w') as results_file:
     #text_file = open("Budget_Analysis.txt", "w")
-    results_file.write(f"There are {Month_Counter} months:]\n" "The net total amount of 'Profit/Losses' is {Profits_Total} for the budget:\n" "The Profit/Loss average is {PL_average} for the budget:\n" "The largest increase is {Increase} for the budget:\n" "The largest decrease is {Decrease} for the budget:")
+        results_file.write(
+            f"There are {Month_Counter} months:\n" 
+            f"The net total amount of 'Profit/Losses' is {Profits_Total} for the budget:\n" 
+            f"The Profit/Loss average is {PL_average} for the budget:\n" 
+            f"The largest increase is {Increase} for the budget:\n" 
+            f"The largest decrease is {Decrease} for the budget:")
     #text_file.close() 
 
 
