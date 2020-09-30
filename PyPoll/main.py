@@ -48,12 +48,12 @@ with open(election_data) as csvfile:
     Poll_Analysis = os.path.join('Analysis','Poll_Analysis.txt')
     with open(Poll_Analysis, 'w') as results_file:
     #   
-    # text_file.write(f"Winner: {winner}]\n" "Candidate votes:{candidate votes\n" "vote percentage:{vote percentage}\n")
-        for row in Results:    #print(f"Stats for {name}")
+    
+        for row in Results:    
             print(row)
             results_file.write(row +"\n")
            
-# consult dicitionaries, key pairs, and https://realpython.com/iterate-through-dictionary-python/ 
+
 
 
 
