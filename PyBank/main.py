@@ -4,15 +4,19 @@ import csv
 
 def bank_stats(budget_data):    
     Profits_Losses = []
-    Month_Counter = 0 
+    Month_Counter = 1 
+    Profits_Losses.append(int(first_row)) #change "row"
     for row in budget_data:
         Date = row[0] 
+        
         Month_Counter = Month_Counter+1 
         Profits_Losses.append(int(row[1]))  
-        
-    Increase = max(Profits_Losses)
+        Difference = row[1] - next(row[1])    
+   #look up syntax for specifying list values
+    Increase = max(Profits_Losses) 
     Decrease = min(Profits_Losses)
-    Profits_Total = sum(Profits_Losses)
+    
+    Profits_Total = sum(Profits_Losses) + #way to specify first row[1] value
     PL_average = float(statistics.mean(Profits_Losses))   
     
     print(Month_Counter)
@@ -44,12 +48,13 @@ with open(budget_data) as csvfile:
 #header = nextcsv, skip headers to get to data     
     #print(header)
     header = next(csvreader)
-    for row in csvreader:
-        print(row[0]) # prints the entire row
-        print(f'First column value: {row[0]}') # prints only first column value for each row 
+    first_row = next(csvreader)
+    #for row in csvreader:
+        #print(row[0]) # prints the entire row
+        #print(f'First column value: {row[0]}') # prints only first column value for each row 
 
 
-        bank_stats(csvreader)
+    bank_stats(csvreader)
 
 
     
