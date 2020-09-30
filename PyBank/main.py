@@ -5,35 +5,40 @@ import csv
 def bank_stats(budget_data):    
     Profits_Losses = []
     Month_Counter = 1 
-    Profits_Losses.append(int(first_row)) #change "row"
+    first_row = next(csvreader)
+    Profits_Losses.append(first_row)
+    Difference = []
+    
     for row in budget_data:
         Date = row[0] 
         
         Month_Counter = Month_Counter+1 
-        Profits_Losses.append(int(row[1]))  
-        Difference = row[1] - next(row[1])    
+        Profits_Losses.append(row[1])  
+        Difference.append(row[1])
+        Difference = (row[1] - next(row[1])    
+        
    #look up syntax for specifying list values
-    Increase = max(Profits_Losses) 
-    Decrease = min(Profits_Losses)
+    #Increase = max(Profits_Losses) 
+    #Decrease = min(Profits_Losses)
     
-    Profits_Total = sum(Profits_Losses) + #way to specify first row[1] value
-    PL_average = float(statistics.mean(Profits_Losses))   
+    Profits_Total = sum(Profits_Losses) + int(first_row[1]))
+    Dif_average = float(statistics.mean(Difference))   
     
     print(Month_Counter)
     print(Profits_Total)
-    print(PL_average)
-    print(Increase)
-    print(Decrease)
+    print(Dif_average)
+    #print(Increase)
+    #print(Decrease)
     
     Budget_Analysis = os.path.join('Analysis','Budget_Analysis.txt')
     with open(Budget_Analysis, 'w') as results_file:
     #text_file = open("Budget_Analysis.txt", "w")
-        results_file.write(
-            f"There are {Month_Counter} months:\n" 
-            f"The net total amount of 'Profit/Losses' is {Profits_Total} for the budget:\n" 
-            f"The Profit/Loss average is {PL_average} for the budget:\n" 
-            f"The largest increase is {Increase} for the budget:\n" 
-            f"The largest decrease is {Decrease} for the budget:")
+     #   results_file.write(
+      #      f"There are {Month_Counter} months:\n" 
+       #     f"The net total amount of 'Profit/Losses' is {Profits_Total} for the budget:\n" 
+        #    f"The Profit/Loss average is {Dif_average} for the budget:\n" 
+         #   f"The largest increase is {Increase} for the budget:\n" 
+          #  f"The largest decrease is {Decrease} for the budget:")
     #text_file.close() 
 
 
@@ -58,4 +63,4 @@ with open(budget_data) as csvfile:
 
 
     
-     
+     # consult dicitionaries, key pairs, and https://realpython.com/iterate-through-dictionary-python/ 
