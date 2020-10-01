@@ -15,16 +15,16 @@ with open(budget_data) as csvfile:
     #first_row = next(csvreader)
     Last_month = None
     Last_PL = None
-    PL_diff = {row[0]:row[1]}
+    PL_diff = []
     for row in csvreader:
 
     #Profits_Losses = []
         Month_Counter = Month_Counter+1 
         Date = row[0] 
-        Profits_Losses = row[1]
+        Profits_Losses = (row[1])
         if Last_month!=None:
-            PL_diff = Profits_Losses-Last_PL  
-            Month_diff[Date]=PL_diff
+            PL_diff.append(float(Profits_Losses))  
+            Month_diff[Date]= float(Profits_Losses)- float(Last_PL)
         Last_month = Date
         Last_PL = Profits_Losses
         #first_row = next(csvreader)
@@ -52,7 +52,7 @@ with open(budget_data) as csvfile:
     Dif_average = round(mean(Month_diff.values()),2)  
    
     print(Dif_average)
-    #print(Profits_Total)
+    print(Profits_Total)
     #print(Increase_Month)
     #print(Decrease)
     
