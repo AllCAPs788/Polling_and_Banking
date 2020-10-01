@@ -11,7 +11,7 @@ with open(budget_data) as csvfile:
 
     header = next(csvreader)
     Month_Counter = 0
-    Month_diff= {}
+    Month_diff= []
     #first_row = next(csvreader)
     Last_month = None
     Last_PL = None
@@ -23,10 +23,11 @@ with open(budget_data) as csvfile:
         Date = row[0] 
         Profits_Losses = (row[1])
         if Last_month!=None:
-            PL_diff.append(float(Profits_Losses))  
-            Month_diff[Date]= float(Profits_Losses)- float(Last_PL)
+             
+            Month_diff.append(float(Profits_Losses)- float(Last_PL))
         Last_month = Date
         Last_PL = Profits_Losses
+        PL_diff.append(float(Profits_Losses)) 
         #first_row = next(csvreader)
         #Profits_Losses.append(next(row[1]))
        # Difference = []
@@ -40,18 +41,20 @@ with open(budget_data) as csvfile:
         #Difference.append(next(row[1]) - row[1])
    #look up syntax for specifying list values
     Increase_Month = max(Month_diff)
-    Increase = Month_diff[Increase_Month]
+    Max_month = Month_diff.index(Increase_Month)
+    #Increase = Month_diff[Increase_Month]
     #Increase_Month = max(Month_diff,key=Month_diff.get)
     
     print(Increase_Month) 
-    print(Increase)
-    
-    #Decrease = min(Month_diff)
-    #print(Decrease)
-    Profits_Total = sum(PL_diff) 
-    Dif_average = round(mean(Month_diff.values()),2)  
+    #print(Increase)
+    Decrease_Month = max(Month_diff)
+    Min_month = Month_diff.index(Decrease_Month)
+        
+    print(Decrease_Month)
+    Profits_Total = sum(PL_diff) #needs work 
+    Dif_average = round(mean(Month_diff),2) #correct 
    
-    print(Dif_average)
+    print(Dif_average) #correct
     print(Profits_Total)
     #print(Increase_Month)
     #print(Decrease)
@@ -61,18 +64,13 @@ with open(budget_data) as csvfile:
     #results_file = open("Budget_Analysis.txt", "w")
         results_file.write(
             f"There are {Month_Counter} months:\n" 
-           # f"The net total amount of 'Profit/Losses' is {Profits_Total} for the budget:\n" 
-            f"The Profit/Loss average is {Dif_average} for the budget:\n") 
-           # f"The largest increase is {Increase_Month} for the budget:\n" 
-           #f"The largest decrease is {Decrease_Month} for the budget:")
+            f"The net total amount of 'Profit/Losses' is {Profits_Total} for the budget:\n" 
+            f"The Profit/Loss average is {Dif_average} for the budget:\n" 
+            f"The largest increase is {Increase_Month} for the budget:\n" 
+            f"The largest decrease is {Decrease_Month} for the budget:")
     #text_file.close() 
 
 
-#refer to wrestler functions and how to read/write exercises
-# Path to collect data from the Resources folder
-
-
-# Split the data on commas
 
 
 
