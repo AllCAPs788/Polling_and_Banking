@@ -15,7 +15,7 @@ with open(budget_data) as csvfile:
     #first_row = next(csvreader)
     Last_month = None
     Last_PL = None
-    PL_diff = 0
+    PL_diff = {row[0]:row[1]}
     for row in csvreader:
 
     #Profits_Losses = []
@@ -23,7 +23,7 @@ with open(budget_data) as csvfile:
         Date = row[0] 
         Profits_Losses = row[1]
         if Last_month!=None:
-            PL_diff = float(Profits_Losses)-float(Last_PL)  
+            PL_diff = Profits_Losses-Last_PL  
             Month_diff[Date]=PL_diff
         Last_month = Date
         Last_PL = Profits_Losses
@@ -48,23 +48,23 @@ with open(budget_data) as csvfile:
     
     #Decrease = min(Month_diff)
     #print(Decrease)
-    Profits_Total = sum(Profits_Losses) + int(first_row[1])
+    Profits_Total = sum(PL_diff) 
     Dif_average = round(mean(Month_diff.values()),2)  
    
     print(Dif_average)
-    print(Profits_Total)
+    #print(Profits_Total)
     #print(Increase_Month)
     #print(Decrease)
     
-    #Budget_Analysis = os.path.join('Analysis','Budget_Analysis.txt')
+    Budget_Analysis = os.path.join('Analysis','Budget_Analysis.txt')
     with open(Budget_Analysis, 'w') as results_file:
-    results_file = open("Budget_Analysis.txt", "w")
+    #results_file = open("Budget_Analysis.txt", "w")
         results_file.write(
             f"There are {Month_Counter} months:\n" 
-            f"The net total amount of 'Profit/Losses' is {Profits_Total} for the budget:\n" 
-            f"The Profit/Loss average is {Dif_average} for the budget:\n" 
-            f"The largest increase is {Increase_Month} for the budget:\n" 
-            f"The largest decrease is {Decrease_Month} for the budget:")
+           # f"The net total amount of 'Profit/Losses' is {Profits_Total} for the budget:\n" 
+            f"The Profit/Loss average is {Dif_average} for the budget:\n") 
+           # f"The largest increase is {Increase_Month} for the budget:\n" 
+           #f"The largest decrease is {Decrease_Month} for the budget:")
     #text_file.close() 
 
 
